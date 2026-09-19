@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">SafeCore | Protección Autónoma ante Sismos e Incendios</title>
+<meta name="description" content="SafeCore es una solución IoT de protección autónoma que detecta emergencias, ejecuta protocolos de seguridad y monitorea infraestructuras en tiempo real.">
+<meta name="keywords" content="SafeCore, PrimeCore Group, IoT, seguridad, sismos, incendios, Edge Computing, Perú, prevención de desastres, edificios inteligentes">
+<meta name="author" content="PrimeCore Group">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.safecore.pe/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="SafeCore | Protección Autónoma ante Sismos e Incendios">
+<meta property="og:description" content="Detecta. Actúa. Protege. Sistema autónomo de alerta sísmica, evacuación inteligente y prevención de incendios para complejos residenciales y comerciales.">
+<meta property="og:image" content="assets/images/og-image.svg">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="SafeCore">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SafeCore | Protección Autónoma ante Sismos e Incendios">
+<meta name="twitter:description" content="Sistema autónomo de alerta sísmica, evacuación inteligente y prevención de incendios.">
+<meta name="twitter:image" content="assets/images/og-image.svg">
+
+<link rel="icon" type="image/png" href="assets/images/favicon-safecore.png">
+
+<!-- Aplica tema guardado antes del primer pintado para evitar parpadeo -->
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem('safecore-theme');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      var lang = localStorage.getItem('safecore-lang');
+      if (lang === 'en') document.documentElement.setAttribute('lang', 'en');
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Saltar al contenido principal</a>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner container">
+    <a href="#inicio" class="navbar__logo" aria-label="SafeCore, inicio">
+      <img src="assets/images/logo-safecore-mark.png" alt="" class="logo-mark" width="34" height="34">
+      <span class="navbar__brand">SafeCore</span>
+    </a>
+
+    <nav class="navbar__nav" id="primary-navigation" aria-label="Navegación principal">
+      <ul class="navbar__links">
+        <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="#que-es" data-i18n="nav.whatis">¿Qué es?</a></li>
+        <li><a href="#solucion" data-i18n="nav.solution">Solución</a></li>
+        <li><a href="#como-funciona" data-i18n="nav.tech">Tecnología</a></li>
+        <li><a href="#beneficios" data-i18n="nav.benefits">Beneficios</a></li>
+        <li><a href="#para-quien" data-i18n="nav.who">Para quién</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="navbar__utilities">
+      
+      <a href="#contacto" class="btn btn--primary navbar__cta" data-i18n="nav.cta">Solicita una demo</a>
+
+
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language / Cambiar idioma">
+        <span class="lang-toggle__option is-active" data-lang-option="es">ES</span>
+        <span class="lang-toggle__sep">|</span>
+        <span class="lang-toggle__option" data-lang-option="en">EN</span>
+      </button>
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema claro / oscuro" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+
+
+
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="#que-es" data-i18n="nav.whatis">¿Qué es?</a></li>
+      <li><a href="#solucion" data-i18n="nav.solution">Solución</a></li>
+      <li><a href="#como-funciona" data-i18n="nav.tech">Tecnología</a></li>
+      <li><a href="#beneficios" data-i18n="nav.benefits">Beneficios</a></li>
+      <li><a href="#para-quien" data-i18n="nav.who">Para quién</a></li>
+      <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div class="mobile-menu__utilities">
+      <button id="langToggleMobile" class="lang-toggle" type="button" aria-label="Switch language / Cambiar idioma">
+        <span class="lang-toggle__option is-active" data-lang-option="es">ES</span>
+        <span class="lang-toggle__sep">|</span>
+        <span class="lang-toggle__option" data-lang-option="en">EN</span>
+      </button>
+      <button id="themeToggleMobile" class="theme-toggle" type="button" aria-label="Cambiar tema claro / oscuro" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+    <a href="#contacto" class="btn btn--primary mobile-menu__cta" data-i18n="nav.cta">Solicita una demo</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="container hero__grid">
+      <div class="hero__content" data-animate="fade-right">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Tecnología para una infraestructura más segura</p>
+        <h1 class="hero__title" data-i18n="hero.title">Protege lo que más importa con <span class="text-gradient">SafeCore</span></h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">Sistema autónomo de alerta sísmica, evacuación inteligente y prevención de incendios para complejos residenciales y comerciales.</p>
+        <div class="hero__actions">
+          <a href="#contacto" class="btn btn--primary btn--lg" data-i18n="hero.cta1">Solicita una demo</a>
+          <a href="#como-funciona" class="btn btn--ghost btn--lg" data-i18n="hero.cta2">Conoce cómo funciona</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">+798</span>
+            <span class="hero__stat-label" data-i18n="hero.stat1">Sismos monitoreados</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">24/7</span>
+            <span class="hero__stat-label" data-i18n="hero.stat2">Protección continua</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-value">&lt;1s</span>
+            <span class="hero__stat-label" data-i18n="hero.stat3">Respuesta automatizada</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual" data-animate="fade-left">
+        <div class="hero__panel">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1400&h=1750&q=90" alt="Edificio moderno de vidrio supervisado por sensores inteligentes" class="hero__image">
+          <div class="hero__overlay"></div>
+
+          <div class="hero__card hero__card--status">
+            <span class="dot dot--pulse"></span>
+            <div>
+              <strong data-i18n="hero.badge.status">Sistema protegido</strong>
+              <span data-i18n="hero.badge.statusSub">Monitoreo activo</span>
+            </div>
+          </div>
+
+          <div class="hero__card hero__card--cloud">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 18a4.5 4.5 0 01-.6-8.96A5.5 5.5 0 0117 8a4 4 0 01-.5 7.97H7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span data-i18n="hero.badge.cloud">Conectado a la nube</span>
+          </div>
+
+          <div class="hero__card hero__card--node hero__card--node-1">
+            <span class="node-dot"></span> <span data-i18n="hero.badge.node1">Nodo IoT · Sismo</span>
+          </div>
+          <div class="hero__card hero__card--node hero__card--node-2">
+            <span class="node-dot node-dot--fire"></span> <span data-i18n="hero.badge.node2">Nodo IoT · Incendio</span>
+          </div>
+
+          <div class="hero__card hero__card--edge">
+            <span class="dot dot--pulse-sm"></span> <span data-i18n="hero.badge.edge">Edge activo · &lt;1s</span>
+          </div>
+
+          <div class="hero__card hero__card--dashboard">
+            <div class="dashboard-mini__header" data-i18n="hero.badge.dashboard">Panel en vivo</div>
+            <div class="dashboard-mini__bars">
+              <span style="height:40%"></span><span style="height:70%"></span><span style="height:55%"></span><span style="height:85%"></span><span style="height:35%"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ¿QUÉ ES SAFECORE? ===================== -->
+  <section class="section" id="que-es">
+    <div class="container what-is">
+      <div class="photo-frame what-is__photo" data-animate="fade-right">
+        <svg class="photo-frame__fallback" width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-0.5 9-4 9-9V7l-9-5z" stroke="currentColor" stroke-width="1.5"/></svg>
+        <img src="assets/images/smart/smart-01-solar-home.png" alt="Hogar inteligente con paneles solares y electrodomésticos conectados" loading="lazy">
+        <span class="photo-frame__tag" data-i18n="whatis.photoTag">Infraestructura inteligente</span>
+      </div>
+
+      <div data-animate="fade-left">
+        <p class="hero__eyebrow" data-i18n="whatis.eyebrow">Un sistema, tres capacidades</p>
+        <h2 data-i18n="whatis.title">¿Qué es SafeCore?</h2>
+        <p data-i18n="whatis.lead">SafeCore es un sistema autónomo basado en tecnología IoT que permite detectar amenazas sísmicas y condiciones de incendio, validar eventos y ejecutar protocolos automáticos de protección.</p>
+
+        <div class="what-is__pillars">
+          <div class="what-is__pillar">
+            <div class="what-is__pillar-icon what-is__pillar-icon--blue">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12h4l2-6 4 12 2-6h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="whatis.p1.title">Detección Dual</h3>
+              <p data-i18n="whatis.p1.desc">Detecta movimientos sísmicos y condiciones asociadas a incendios mediante sensores especializados.</p>
+            </div>
+          </div>
+          <div class="what-is__pillar">
+            <div class="what-is__pillar-icon what-is__pillar-icon--green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="whatis.p2.title">Actuación Autónoma</h3>
+              <p data-i18n="whatis.p2.desc">Ejecuta protocolos de emergencia sin depender de una intervención humana inmediata.</p>
+            </div>
+          </div>
+          <div class="what-is__pillar">
+            <div class="what-is__pillar-icon what-is__pillar-icon--orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 18a4.5 4.5 0 01-.6-8.96A5.5 5.5 0 0117 8a4 4 0 01-.5 7.97H7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 data-i18n="whatis.p3.title">Edge-Cloud</h3>
+              <p data-i18n="whatis.p3.desc">Procesa eventos localmente para minimizar la latencia y utiliza la nube para monitoreo, historial y notificaciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEMÁTICA ===================== -->
+  <section class="section section--soft" id="problema">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="problem.title">El problema que resolvemos</h2>
+        <p data-i18n="problem.subtitle">Durante una emergencia, cada segundo importa.</p>
+      </div>
+
+      <div class="problem-banner" data-animate="fade-up">
+        <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=2400&h=460&q=90" alt="Vista de rascacielos representando infraestructura urbana densamente construida" loading="lazy">
+        <div class="problem-banner__overlay">
+          <div class="problem-banner__text">
+            <h3 data-i18n="problem.banner.title">El riesgo existe todos los días</h3>
+            <p data-i18n="problem.banner.text">Ciudades densamente construidas, edificaciones antiguas y actividad sísmica constante conviven en el mismo territorio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--3 stats-grid">
+        <div class="stat-card" data-animate="fade-up">
+          <span class="stat-card__value">8,900</span>
+          <p class="stat-card__label" data-i18n="problem.stat1.label">Incendios atendidos por el Cuerpo General de Bomberos Voluntarios del Perú durante 2025 a nivel nacional.</p>
+          <span class="stat-card__source" data-i18n="problem.stat1.source">Fuente: CGBVP, balance anual 2025</span>
+        </div>
+        <div class="stat-card" data-animate="fade-up">
+          <span class="stat-card__value">1.93M</span>
+          <p class="stat-card__label" data-i18n="problem.stat2.label">Damnificados por emergencias y desastres registrados en el Perú entre 2003 y 2017.</p>
+          <span class="stat-card__source" data-i18n="problem.stat2.source">Fuente: INDECI–SINPAD (dato histórico, periodo 2003–2017)</span>
+        </div>
+        <div class="stat-card" data-animate="fade-up">
+          <span class="stat-card__value">10–15 s</span>
+          <p class="stat-card__label" data-i18n="problem.stat3.label">Tiempo aproximado que puede tomar una reacción humana consciente ante el inicio de una emergencia.</p>
+          <span class="stat-card__source" data-i18n="problem.stat3.source">Referencia técnica orientativa</span>
+        </div>
+      </div>
+
+      <div class="vs-panel" data-animate="fade-up">
+        <div class="vs-panel__side">
+          <h3 data-i18n="problem.vs.human.title">Reacción humana</h3>
+          <p data-i18n="problem.vs.human.text">Segundos de duda, evaluación y desplazamiento antes de actuar.</p>
+        </div>
+        <div class="vs-panel__divider">VS</div>
+        <div class="vs-panel__side vs-panel__side--accent">
+          <h3>SafeCore</h3>
+          <p data-i18n="problem.vs.safecore.text">Procesamiento automatizado en milisegundos, sin depender de que alguien reaccione primero.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ¿POR QUÉ NECESITAMOS SAFECORE? ===================== -->
+  <section class="section" id="por-que">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="why.title">¿Por qué necesitamos SafeCore?</h2>
+        <p data-i18n="why.subtitle">En Perú, los desastres no son un escenario hipotético. La actividad sísmica, los incendios urbanos y los riesgos secundarios pueden convertir una emergencia en una situación crítica en cuestión de segundos.</p>
+      </div>
+
+      <div class="chain" data-animate="fade-up">
+        <div class="chain__item">
+          <span class="chain__label" data-i18n="why.c1.label">Problema real</span>
+          <p data-i18n="why.c1.text">Perú registra actividad sísmica constante y episodios de incendios urbanos con pérdida de vidas.</p>
+        </div>
+        <div class="chain__arrow" aria-hidden="true">→</div>
+        <div class="chain__item">
+          <span class="chain__label" data-i18n="why.c2.label">Limitación actual</span>
+          <p data-i18n="why.c2.text">Las alertas existentes informan, pero la acción de protección sigue dependiendo de una persona.</p>
+        </div>
+        <div class="chain__arrow" aria-hidden="true">→</div>
+        <div class="chain__item">
+          <span class="chain__label" data-i18n="why.c3.label">Oportunidad</span>
+          <p data-i18n="why.c3.text">IoT, Edge Computing y Cloud permiten procesar y actuar en el lugar del evento, en tiempo real.</p>
+        </div>
+        <div class="chain__arrow" aria-hidden="true">→</div>
+        <div class="chain__item chain__item--accent">
+          <span class="chain__label" data-i18n="why.c4.label">Solución SafeCore</span>
+          <p data-i18n="why.c4.text">Detecta, valida y ejecuta protocolos automáticos de protección sin esperar la reacción humana.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EL RIESGO ESTÁ PRESENTE (NOTICIAS) ===================== -->
+  <section class="section section--soft" id="contexto">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="news.title">El riesgo está presente</h2>
+        <p data-i18n="news.subtitle">Eventos recientes en Perú que ilustran por qué la detección y la actuación automatizadas dejaron de ser un lujo.</p>
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-card news-card--seismic" data-animate="fade-up">
+          <div class="photo-frame news-card__photo">
+            <svg class="photo-frame__fallback" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12h4l2-6 4 12 2-6h8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <img src="https://imgmedia.larepublica.pe/1200x735/larepublica/original/2026/08/28/6a91bac819f6d44eef0846ae.jpg" alt="Sismos en Perú, composición La República / Andina" loading="lazy">
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__top">
+              <span class="news-card__category" data-i18n="news.cat.seism">Sismo</span>
+              <span class="news-card__date">Agosto 2026</span>
+            </div>
+            <h3 data-i18n="news.n1.title">Perú supera los 600 sismos registrados en 2026</h3>
+            <p data-i18n="news.n1.text">El Instituto Geofísico del Perú (IGP) reportó que el país superó los 600 movimientos telúricos en lo que va del año, concentrados principalmente en Ica, Arequipa, Lima, Junín, Ucayali y Pasco.</p>
+            <div class="news-card__data" data-i18n="news.n1.data">Dato relevante: +600 sismos registrados en 2026</div>
+            <div class="news-card__footer">
+              <span data-i18n="news.n1.source">Fuente: IGP / La República</span>
+              <a href="https://larepublica.pe/sociedad/2026/08/28/peru-supera-los-600-sismos-en-2026-que-significa-y-donde-se-concentra-la-mayor-actividad-sismica-segun-igp-774396" target="_blank" rel="noopener" data-i18n="news.link">Ver fuente →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card news-card--seismic" data-animate="fade-up">
+          <div class="photo-frame news-card__photo">
+            <svg class="photo-frame__fallback" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12h4l2-6 4 12 2-6h8" stroke="currentColor" stroke-width="1.6"/></svg>
+            <img src="https://imgmedia.larepublica.pe/1200x735/larepublica/original/2026/07/20/6a5e348bbdbdc0334507be04.jpg" alt="Sismo de magnitud 5.1 en Chupaca, Junín, composición La República / Andina" loading="lazy">
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__top">
+              <span class="news-card__category" data-i18n="news.cat.seism">Sismo</span>
+              <span class="news-card__date">18 · 07 · 2026</span>
+            </div>
+            <h3 data-i18n="news.n2.title">Sismo de magnitud 5.1 en Chupaca, Junín</h3>
+            <p data-i18n="news.n2.text">Un movimiento telúrico en Chongos Bajo, provincia de Chupaca, dejó seis fallecidos, decenas de heridos y daños en viviendas, establecimientos de salud e infraestructura pública.</p>
+            <div class="news-card__data" data-i18n="news.n2.data">Dato relevante: 6 fallecidos, magnitud 5.1</div>
+            <div class="news-card__footer">
+              <span data-i18n="news.n1.source">Fuente: IGP / La República</span>
+              <a href="https://larepublica.pe/sociedad/2026/07/20/peru-suma-477-sismos-durante-2026-ica-arequipa-y-lima-concentran-la-mayor-actividad-sismica-segun-igp-1438340" target="_blank" rel="noopener" data-i18n="news.link">Ver fuente →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card news-card--fire" data-animate="fade-up">
+          <div class="photo-frame news-card__photo">
+            <svg class="photo-frame__fallback" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.6"/></svg>
+            <img src="https://www.infobae.com/resizer/v2/NIDYGS5MDFDBNIGVYXA2FQ3I6M.jpg?auth=19c5aaab7294696532450b946f2aadc448f1d040c653e144ba1efc62f77172e1&smart=true&width=350&height=206&quality=85" alt="Escena tras el incendio en La Victoria, con presencia policial. Fotografía: Andina" loading="lazy">
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__top">
+              <span class="news-card__category" data-i18n="news.cat.fire">Incendio</span>
+              <span class="news-card__date">22 · 07 · 2026</span>
+            </div>
+            <h3 data-i18n="news.n3.title">Incendio en La Victoria deja diez fallecidos</h3>
+            <p data-i18n="news.n3.text">Un incendio en una vivienda del distrito de La Victoria, en Lima, arrasó con el inmueble y dejó diez víctimas mortales de una misma familia, incluidos varios menores de edad.</p>
+            <div class="news-card__data" data-i18n="news.n3.data">Dato relevante: 10 víctimas mortales</div>
+            <div class="news-card__footer">
+              <span data-i18n="news.n3.source">Fuente: Infobae Perú</span>
+              <a href="https://www.infobae.com/peru/2026/07/22/incendio-en-la-victoria-deja-muertos-extorsionadores-habrian-provocado-el-fuego/" target="_blank" rel="noopener" data-i18n="news.link">Ver fuente →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="news-card news-card--prevention" data-animate="fade-up">
+          <div class="photo-frame news-card__photo">
+            <svg class="photo-frame__fallback" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 18a4.5 4.5 0 01-.6-8.96A5.5 5.5 0 0117 8a4 4 0 01-.5 7.97H7z" stroke="currentColor" stroke-width="1.6"/></svg>
+            <img src="https://peru21.pe/sites/default/efsfiles/2026-01/bomberos-atendieron-mas-de-55-mil-emergencias-en-2025.png" alt="Bomberos atendieron más de 55 mil emergencias en 2025, fotografía: Difusión / Perú21" loading="lazy">
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__top">
+              <span class="news-card__category" data-i18n="news.cat.prevention">Prevención</span>
+              <span class="news-card__date" data-i18n="news.n4.date">Balance 2025</span>
+            </div>
+            <h3 data-i18n="news.n4.title">Bomberos atendieron 55,308 emergencias en un año</h3>
+            <p data-i18n="news.n4.text">El Cuerpo General de Bomberos Voluntarios del Perú (CGBVP) reportó 55,308 emergencias atendidas en 2025 a nivel nacional, de las cuales 8,900 fueron incendios.</p>
+            <div class="news-card__data" data-i18n="news.n4.data">Dato relevante: 8,900 incendios sofocados</div>
+            <div class="news-card__footer">
+              <span data-i18n="news.n4.source">Fuente: CGBVP / Perú21</span>
+              <a href="https://peru21.pe/peru/bomberos-55-mil-emergencias-2025-incendios-lideran-las-estadisticas/" target="_blank" rel="noopener" data-i18n="news.link">Ver fuente →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Transición: qué tienen en común -->
+      <div class="pattern" data-animate="fade-up">
+        <h3 class="pattern__title" data-i18n="pattern.title">¿Qué tienen en común estos escenarios?</h3>
+        <div class="pattern__flow">
+          <span data-i18n="pattern.f1">Evento real</span>
+          <span class="pattern__arrow" aria-hidden="true">↓</span>
+          <span data-i18n="pattern.f2">Segundos críticos</span>
+          <span class="pattern__arrow" aria-hidden="true">↓</span>
+          <span data-i18n="pattern.f3">Reacción humana</span>
+          <span class="pattern__arrow" aria-hidden="true">↓</span>
+          <span data-i18n="pattern.f4">Riesgos secundarios</span>
+          <span class="pattern__arrow" aria-hidden="true">↓</span>
+          <span data-i18n="pattern.f5">Necesidad de automatización</span>
+          <span class="pattern__arrow" aria-hidden="true">↓</span>
+          <span class="pattern__flow-final">SafeCore</span>
+        </div>
+        <p class="pattern__note" data-i18n="pattern.note">SafeCore busca reducir la dependencia de la reacción humana mediante automatización, sin reemplazar los protocolos oficiales de INDECI y Defensa Civil, sino ejecutándolos más rápido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEL PROBLEMA A LA SOLUCIÓN ===================== -->
+  <section class="section" id="del-problema-a-la-solucion">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="compare.title">Del problema a la solución</h2>
+      </div>
+
+      <div class="compare-table" data-animate="fade-up">
+        <div class="compare-table__row compare-table__row--head">
+          <span data-i18n="compare.head1">Situación actual</span>
+          <span data-i18n="compare.head2">Respuesta SafeCore</span>
+        </div>
+        <div class="compare-table__row">
+          <span data-i18n="compare.r1a">Una persona debe reaccionar</span>
+          <span data-i18n="compare.r1b">El sistema puede actuar automáticamente</span>
+        </div>
+        <div class="compare-table__row">
+          <span data-i18n="compare.r2a">La alerta puede ser solo informativa</span>
+          <span data-i18n="compare.r2b">SafeCore ejecuta protocolos configurados</span>
+        </div>
+        <div class="compare-table__row">
+          <span data-i18n="compare.r3a">Riesgos secundarios pueden pasar desapercibidos</span>
+          <span data-i18n="compare.r3b">SafeCore integra detección y actuación</span>
+        </div>
+        <div class="compare-table__row">
+          <span data-i18n="compare.r4a">Información dispersa</span>
+          <span data-i18n="compare.r4b">Dashboard centralizado</span>
+        </div>
+        <div class="compare-table__row">
+          <span data-i18n="compare.r5a">Difícil supervisar múltiples sedes</span>
+          <span data-i18n="compare.r5b">Arquitectura cloud</span>
+        </div>
+        <div class="compare-table__row">
+          <span data-i18n="compare.r6a">Respuesta dependiente del tiempo humano</span>
+          <span data-i18n="compare.r6b">Procesamiento local Edge</span>
+        </div>
+      </div>
+
+      <p class="highlight-quote" data-animate="fade-up" data-i18n="compare.quote">"La innovación de SafeCore no está solamente en detectar una emergencia, sino en convertir esa detección en una respuesta automática y coordinada."</p>
+    </div>
+  </section>
+
+  <!-- ===================== SOLUCIÓN ===================== -->
+  <section class="section section--soft" id="solucion">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="solution.title">Una respuesta inteligente ante emergencias</h2>
+        <p data-i18n="solution.subtitle">SafeCore transforma una alerta en una respuesta coordinada.</p>
+      </div>
+
+      <div class="solution-editorial" data-animate="fade-up">
+        <div class="photo-frame solution-editorial__photo">
+          <svg class="photo-frame__fallback" width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4v13a3 3 0 003 3h13M8 15l3-3 3 3 5-6" stroke="currentColor" stroke-width="1.5"/></svg>
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1600&q=90" alt="Sistema tecnológico de monitoreo representando la arquitectura de SafeCore" loading="lazy">
+          <span class="photo-frame__caption"><span class="dot dot--pulse-sm"></span><span data-i18n="solution.photoCaption">Sistema en operación</span></span>
+        </div>
+
+        <div class="solution-editorial__list">
+          <div class="feature-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <div><h3 data-i18n="solution.f1.title">Detección dual validada</h3><p data-i18n="solution.f1.desc">Cruza información de sensores para confirmar eventos y reducir falsas alarmas.</p></div>
+          </div>
+          <div class="feature-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><h3 data-i18n="solution.f2.title">Evacuación autónoma</h3><p data-i18n="solution.f2.desc">Facilita la apertura automática de puertas y despeje de rutas de evacuación.</p></div>
+          </div>
+          <div class="feature-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div><h3 data-i18n="solution.f3.title">Iluminación de emergencia</h3><p data-i18n="solution.f3.desc">Activa iluminación de emergencia para mejorar la visibilidad durante una evacuación.</p></div>
+          </div>
+          <div class="feature-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <div><h3 data-i18n="solution.f4.title">Corte de riesgos eléctricos</h3><p data-i18n="solution.f4.desc">Permite activar mecanismos destinados a reducir riesgos eléctricos y prevenir incidentes secundarios.</p></div>
+          </div>
+          <div class="feature-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 18a4.5 4.5 0 01-.6-8.96A5.5 5.5 0 0117 8a4 4 0 01-.5 7.97H7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 21l1.5-3M13 21l1.5-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div><h3 data-i18n="solution.f5.title">Contención de incendios</h3><p data-i18n="solution.f5.desc">Activa medidas automatizadas de contención cuando las condiciones configuradas lo requieren.</p></div>
+          </div>
+          <div class="feature-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4v13a3 3 0 003 3h13M8 15l3-3 3 3 5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><h3 data-i18n="solution.f6.title">Notificaciones remotas</h3><p data-i18n="solution.f6.desc">Envía información de eventos a usuarios y responsables.</p></div>
+          </div>
+          <div class="feature-row">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <div><h3 data-i18n="solution.f7.title">Dashboard en tiempo real</h3><p data-i18n="solution.f7.desc">Permite visualizar métricas, estado del inmueble e historial de eventos.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CÓMO FUNCIONA ===================== -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="tech.title">Tecnología Edge-Cloud al servicio de la seguridad</h2>
+      </div>
+
+      <div class="flow" id="techFlow" data-animate="fade-up">
+        <div class="flow__step">
+          <div class="flow__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <span class="flow__number">1</span>
+          <h3 data-i18n="tech.s1.title">Sensores</h3>
+          <p data-i18n="tech.s1.desc">Captan señales sísmicas, humo y calor en tiempo real.</p>
+        </div>
+        <div class="flow__connector" aria-hidden="true"></div>
+        <div class="flow__step">
+          <div class="flow__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <span class="flow__number">2</span>
+          <h3 data-i18n="tech.s2.title">Detección</h3>
+          <p data-i18n="tech.s2.desc">Identifica patrones asociados a una posible emergencia.</p>
+        </div>
+        <div class="flow__connector" aria-hidden="true"></div>
+        <div class="flow__step">
+          <div class="flow__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/></svg></div>
+          <span class="flow__number">3</span>
+          <h3>Edge</h3>
+          <p data-i18n="tech.s3.desc">Procesa la información localmente, sin depender de la nube.</p>
+        </div>
+        <div class="flow__connector" aria-hidden="true"></div>
+        <div class="flow__step">
+          <div class="flow__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="flow__number">4</span>
+          <h3 data-i18n="tech.s4.title">Validación</h3>
+          <p data-i18n="tech.s4.desc">Cruza señales entre sensores para confirmar el evento real.</p>
+        </div>
+        <div class="flow__connector" aria-hidden="true"></div>
+        <div class="flow__step">
+          <div class="flow__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <span class="flow__number">5</span>
+          <h3 data-i18n="tech.s5.title">Actuación</h3>
+          <p data-i18n="tech.s5.desc">Ejecuta el protocolo automático correspondiente al evento.</p>
+        </div>
+        <div class="flow__connector" aria-hidden="true"></div>
+        <div class="flow__step">
+          <div class="flow__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 18a4.5 4.5 0 01-.6-8.96A5.5 5.5 0 0117 8a4 4 0 01-.5 7.97H7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <span class="flow__number">6</span>
+          <h3>Cloud</h3>
+          <p data-i18n="tech.s6.desc">Almacena el historial y sincroniza el estado del sistema.</p>
+        </div>
+        <div class="flow__connector" aria-hidden="true"></div>
+        <div class="flow__step">
+          <div class="flow__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4v13a3 3 0 003 3h13M8 15l3-3 3 3 5-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <span class="flow__number">7</span>
+          <h3 data-i18n="tech.s7.title">Notificación</h3>
+          <p data-i18n="tech.s7.desc">Informa a responsables y usuarios sobre lo ocurrido.</p>
+        </div>
+      </div>
+
+      <!-- Visualización del Edge -->
+      <div class="edge-panel" data-animate="fade-up">
+        <div class="edge-panel__text">
+          <h3 data-i18n="tech.edge.title">Procesamiento local</h3>
+          <p data-i18n="tech.edge.desc">Las decisiones críticas pueden procesarse cerca de los sensores para reducir la latencia.</p>
+        </div>
+        <div class="edge-panel__metrics">
+          <div class="edge-metric">
+            <span class="edge-metric__label" data-i18n="tech.edge.latency">Latencia</span>
+            <span class="edge-metric__value">&lt; 1 s</span>
+          </div>
+          <div class="edge-metric">
+            <span class="edge-metric__label" data-i18n="tech.edge.status">Estado</span>
+            <span class="edge-metric__value edge-metric__value--ok"><span class="dot dot--pulse-sm"></span><span data-i18n="tech.edge.statusValue">Sistema operativo</span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid--2 provided-composite-grid" data-animate="fade-up">
+        <div class="photo-frame provided-composite">
+          <svg class="photo-frame__fallback" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          <img src="assets/images/smart/smart-04-building-tower.png" alt="Edificio con control de iluminación, HVAC, monitoreo de video y control remoto móvil" loading="lazy">
+        </div>
+        <div class="photo-frame provided-composite">
+          <svg class="photo-frame__fallback" width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
+          <img src="assets/images/smart/smart-06-building-dashboard.png" alt="Panel de monitoreo de un edificio: detección de gas, temperatura, humo, humedad y sensores comunales" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== JUSTIFICACIÓN DE LA SOLUCIÓN ===================== -->
+  <section class="section section--soft" id="justificacion">
+    <div class="container">
+      <div class="justify-card" data-animate="fade-up">
+        <h2 data-i18n="justify.title">¿Por qué SafeCore?</h2>
+        <p class="justify-card__lead" data-i18n="justify.lead">Porque transforma una infraestructura pasiva en una infraestructura capaz de responder.</p>
+
+        <div class="before-after">
+          <div class="before-after__col">
+            <h4 data-i18n="justify.before">Antes</h4>
+            <ol class="before-after__steps">
+              <li data-i18n="justify.step.sensor">Sensor</li>
+              <li data-i18n="justify.step.alert">Alerta</li>
+              <li data-i18n="justify.step.person">Persona reacciona</li>
+              <li data-i18n="justify.step.action">Acción</li>
+            </ol>
+          </div>
+          <div class="before-after__vs" aria-hidden="true">vs.</div>
+          <div class="before-after__col before-after__col--accent">
+            <h4>SafeCore</h4>
+            <ol class="before-after__steps">
+              <li data-i18n="justify.step.sensor">Sensor</li>
+              <li data-i18n="justify.step.edge">Procesamiento Edge</li>
+              <li data-i18n="justify.step.validation">Validación</li>
+              <li data-i18n="justify.step.autoaction">Actuación automática</li>
+              <li data-i18n="justify.step.notification">Notificación</li>
+              <li data-i18n="justify.step.dashboard">Dashboard</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BENEFICIOS ===================== -->
+  <section class="section" id="beneficios">
+    <div class="container benefits">
+      <div class="benefits__text" data-animate="fade-right">
+        <h2 data-i18n="benefits.title">¿Por qué elegir SafeCore?</h2>
+        <p data-i18n="benefits.subtitle">Una infraestructura de seguridad pensada para reducir el tiempo de reacción y escalar con tu operación.</p>
+        <ul class="benefits__list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l1">Actuación autónoma</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l2">Prevención de riesgos secundarios</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l3">Escalable desde una vivienda hasta un complejo inmobiliario</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l4">Notificaciones claras y accesibles</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l5">Monitoreo centralizado</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l6">Arquitectura Edge-Cloud</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l7">Dashboard intuitivo</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l8">Diseño orientado a la resiliencia</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span data-i18n="benefits.l9">Compatible con diferentes escenarios de infraestructura</span></li>
+        </ul>
+      </div>
+      <div class="photo-frame provided-composite provided-composite--tall" data-animate="fade-left">
+        <svg class="photo-frame__fallback" width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11l9-8 9 8" stroke="currentColor" stroke-width="1.6"/></svg>
+        <img src="assets/images/smart/smart-02-home-hub.png" alt="Hogar inteligente con panel central de control: cámara, Wi-Fi, iluminación, energía y agua" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DIFERENCIAL ===================== -->
+  <section class="section section--soft" id="diferencial">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="diff.title">SafeCore no solo alerta. SafeCore actúa.</h2>
+      </div>
+
+      <div class="compare-table compare-table--diff" data-animate="fade-up">
+        <div class="compare-table__row compare-table__row--head">
+          <span data-i18n="diff.head1">Sistema tradicional</span>
+          <span>SafeCore</span>
+        </div>
+        <div class="compare-table__row"><span data-i18n="diff.r1a">Detecta</span><span data-i18n="diff.r1b">Detecta</span></div>
+        <div class="compare-table__row"><span data-i18n="diff.r2a">Alerta</span><span data-i18n="diff.r2b">Valida</span></div>
+        <div class="compare-table__row"><span data-i18n="diff.r3a">Depende de una persona</span><span data-i18n="diff.r3b">Actúa automáticamente</span></div>
+        <div class="compare-table__row"><span data-i18n="diff.r4a">Solo informa</span><span data-i18n="diff.r4b">Ejecuta protocolos</span></div>
+        <div class="compare-table__row"><span data-i18n="diff.r5a">Reacción humana</span><span data-i18n="diff.r5b">Procesamiento automatizado</span></div>
+        <div class="compare-table__row"><span data-i18n="diff.r6a">Información limitada</span><span data-i18n="diff.r6b">Dashboard + historial</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SEGMENTOS OBJETIVO ===================== -->
+  <section class="section" id="para-quien">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="segments.title">Diseñado para proteger a quienes más lo necesitan</h2>
+      </div>
+
+      <div class="grid grid--2 segment-grid">
+        <article class="segment-card" data-animate="fade-up">
+          <div class="photo-frame segment-card__photo">
+            <svg class="photo-frame__fallback" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=90" alt="Complejo de departamentos residenciales moderno" loading="lazy">
+          </div>
+          <span class="segment-card__tag" data-i18n="segments.re.tag">Inmobiliarias</span>
+          <h3 data-i18n="segments.re.title">Protección inteligente para múltiples sedes</h3>
+          <ul>
+            <li data-i18n="segments.re.l1">Gestión de complejos residenciales</li>
+            <li data-i18n="segments.re.l2">Edificios comerciales</li>
+            <li data-i18n="segments.re.l3">Supervisión multi-sede</li>
+            <li data-i18n="segments.re.l4">Monitoreo centralizado</li>
+            <li data-i18n="segments.re.l5">Reducción de riesgos</li>
+            <li data-i18n="segments.re.l6">Apoyo al cumplimiento normativo</li>
+          </ul>
+          <a href="#contacto" class="segment-card__cta" data-i18n="segments.re.cta">Soluciones para empresas →</a>
+        </article>
+
+        <article class="segment-card segment-card--featured" data-animate="fade-up">
+          <img src="assets/images/smart/smart-03-phone-app.png" alt="Control de hogar inteligente desde una aplicación móvil" loading="lazy">
+          <div class="segment-card__inner">
+            <span class="segment-card__tag" data-i18n="segments.home.tag">Hogares</span>
+            <h3 data-i18n="segments.home.title">Protección para tu familia</h3>
+            <p class="segment-card__lead" data-i18n="segments.home.lead">La tecnología trabaja para que tú puedas estar tranquilo.</p>
+            <ul>
+              <li data-i18n="segments.home.l1">Evacuación oportuna</li>
+              <li data-i18n="segments.home.l2">Alertas claras</li>
+              <li data-i18n="segments.home.l3">Automatización</li>
+              <li data-i18n="segments.home.l4">Protección ante riesgos secundarios</li>
+              <li data-i18n="segments.home.l5">Tranquilidad 24/7</li>
+            </ul>
+            <a href="#contacto" class="segment-card__cta" data-i18n="segments.home.cta">Conoce SafeCore Home →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== IMPACTO ===================== -->
+  <section class="section section--gradient" id="impacto">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="impact.title">Más tecnología. Menos tiempo de reacción. Más vidas protegidas.</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="impact-card" data-animate="fade-up">
+          <img src="assets/images/smart/smart-05-city-icons.png" alt="Ciudad con edificios monitoreados por sensores inteligentes, representando prevención" loading="lazy">
+          <h3 data-i18n="impact.c1.title">Prevención</h3>
+          <p data-i18n="impact.c1.desc">Identificar riesgos antes de que escalen.</p>
+        </div>
+        <div class="impact-card" data-animate="fade-up">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=90" alt="Panel de control representando la respuesta automatizada" loading="lazy">
+          <h3 data-i18n="impact.c2.title">Respuesta</h3>
+          <p data-i18n="impact.c2.desc">Automatizar acciones críticas.</p>
+        </div>
+        <div class="impact-card" data-animate="fade-up">
+          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1200&q=90" alt="Skyline urbano representando resiliencia" loading="lazy">
+          <h3 data-i18n="impact.c3.title">Resiliencia</h3>
+          <p data-i18n="impact.c3.desc">Ayudar a que las edificaciones estén mejor preparadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ¿POR QUÉ ESTE PROBLEMA? ===================== -->
+  <section class="section" id="por-que-problema">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="reasons.title">¿Por qué decidimos resolver este problema?</h2>
+      </div>
+      <div class="grid grid--4">
+        <div class="reason-card" data-animate="fade-up">
+          <span class="reason-card__number">01</span>
+          <h3 data-i18n="reasons.r1.title">Es un problema real</h3>
+          <p data-i18n="reasons.r1.desc">Perú se encuentra expuesto a eventos sísmicos y diferentes tipos de emergencias urbanas.</p>
+        </div>
+        <div class="reason-card" data-animate="fade-up">
+          <span class="reason-card__number">02</span>
+          <h3 data-i18n="reasons.r2.title">Cada segundo importa</h3>
+          <p data-i18n="reasons.r2.desc">Durante una emergencia, retrasar una acción puede aumentar el riesgo para las personas.</p>
+        </div>
+        <div class="reason-card" data-animate="fade-up">
+          <span class="reason-card__number">03</span>
+          <h3 data-i18n="reasons.r3.title">Las alertas por sí solas tienen limitaciones</h3>
+          <p data-i18n="reasons.r3.desc">Informar de una emergencia no necesariamente significa que una acción preventiva se ejecute inmediatamente.</p>
+        </div>
+        <div class="reason-card" data-animate="fade-up">
+          <span class="reason-card__number">04</span>
+          <h3 data-i18n="reasons.r4.title">Existe una oportunidad tecnológica</h3>
+          <p data-i18n="reasons.r4.desc">IoT, Edge Computing y Cloud permiten crear sistemas capaces de detectar, procesar, actuar y comunicar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIOS ===================== -->
+  <section class="section section--soft" id="testimonios">
+    <div class="container">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="testimonials.title">Lo que dicen quienes imaginan SafeCore en su día a día</h2>
+        <p class="section__note" data-i18n="testimonials.note">Testimonios demostrativos con fines ilustrativos del proyecto. Deben reemplazarse por testimonios reales antes de producción.</p>
+      </div>
+      <div class="grid grid--3">
+        <blockquote class="testimonial" data-animate="fade-up">
+          <p data-i18n="testimonials.t1.quote">"Supervisar cinco edificios a la vez solía ser un reto. Con un panel centralizado, sabríamos el estado de cada sede en segundos."</p>
+          <footer>
+            <span class="testimonial__avatar" aria-hidden="true">AR</span>
+            <div><strong data-i18n="testimonials.t1.role">Administrador inmobiliario</strong><span data-i18n="testimonials.demo">Perfil demostrativo</span></div>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial" data-animate="fade-up">
+          <p data-i18n="testimonials.t2.quote">"Como propietaria, lo que más valoro es no depender de estar despierta y alerta para que las puertas de evacuación se abran."</p>
+          <footer>
+            <span class="testimonial__avatar" aria-hidden="true">PV</span>
+            <div><strong data-i18n="testimonials.t2.role">Propietaria de vivienda</strong><span data-i18n="testimonials.demo">Perfil demostrativo</span></div>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial" data-animate="fade-up">
+          <p data-i18n="testimonials.t3.quote">"La validación cruzada entre sensores es clave: reduce falsas alarmas sin sacrificar velocidad de respuesta."</p>
+          <footer>
+            <span class="testimonial__avatar" aria-hidden="true">ES</span>
+            <div><strong data-i18n="testimonials.t3.role">Especialista en seguridad</strong><span data-i18n="testimonials.demo">Perfil demostrativo</span></div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CARTERA DE CLIENTES (DEMO) ===================== -->
+  <section class="section" id="clientes">
+    <div class="container container--wide">
+      <div class="section__head" data-animate="fade-up">
+        <h2 data-i18n="clients.title">Cartera de clientes</h2>
+        <p data-i18n="clients.subtitle">Empresas y hogares que confiarían en SafeCore para proteger sus espacios.</p>
+        <p class="section__note" data-i18n="clients.note">Sección de demostración: nombres, empresas y fotografías son ficticios, generados únicamente para presentar el funcionamiento del proyecto.</p>
+      </div>
+
+      <div class="clients-carousel">
+        <div class="clients-carousel__viewport">
+          <div class="clients-carousel__track" id="clientsTrack">
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=12" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Marco Salinas</h3>
+              <span class="client-card__role" data-i18n="clients.c1.role">Gerente de Operaciones</span>
+              <span class="client-card__company">Grupo Torres del Sur</span>
+            </article>
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=47" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Daniela Ochoa</h3>
+              <span class="client-card__role" data-i18n="clients.c2.role">Administradora de Propiedad</span>
+              <span class="client-card__company">Residencial Las Palmeras</span>
+            </article>
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=33" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Renzo Villar</h3>
+              <span class="client-card__role" data-i18n="clients.c3.role">Director de Seguridad</span>
+              <span class="client-card__company">Corporación Lima Norte</span>
+            </article>
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=25" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Carla Espinoza</h3>
+              <span class="client-card__role" data-i18n="clients.c4.role">Propietaria de vivienda</span>
+              <span class="client-card__company">Hogar Seguro SAC</span>
+            </article>
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=52" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Jorge Paredes</h3>
+              <span class="client-card__role" data-i18n="clients.c5.role">Jefe de Mantenimiento</span>
+              <span class="client-card__company">Condominio Los Álamos</span>
+            </article>
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=44" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Valeria Núñez</h3>
+              <span class="client-card__role" data-i18n="clients.c6.role">Gerente Comercial</span>
+              <span class="client-card__company">Constructora Miraflores</span>
+            </article>
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=15" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Andrés Ramírez</h3>
+              <span class="client-card__role" data-i18n="clients.c7.role">Administrador de Edificio</span>
+              <span class="client-card__company">Edificio Vista Mar</span>
+            </article>
+
+            <article class="client-card">
+              <img class="client-card__photo" src="https://i.pravatar.cc/160?img=39" alt="Retrato ilustrativo de cliente ficticio" loading="lazy">
+              <h3 class="client-card__name">Fiorella Castro</h3>
+              <span class="client-card__role" data-i18n="clients.c8.role">Directora de Proyectos</span>
+              <span class="client-card__company">Andina Inmobiliaria</span>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL / CONTACTO ===================== -->
+  <section class="section section--cta" id="contacto">
+    <img class="section--cta__bg" src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=2400&q=90" alt="" loading="lazy" aria-hidden="true">
+    <div class="container cta-grid">
+      <div class="cta-grid__text" data-animate="fade-right">
+        <h2 data-i18n="cta.title">¿Listo para proteger tu edificio o tu hogar?</h2>
+        <p data-i18n="cta.subtitle">Descubre cómo SafeCore puede transformar tu infraestructura en un espacio más seguro, inteligente y resiliente.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm" data-animate="fade-left" novalidate>
+        <div class="form-field">
+          <label for="name" data-i18n="form.name">Nombre</label>
+          <input type="text" id="name" name="name" data-i18n-placeholder="form.namePh" placeholder="Tu nombre completo" autocomplete="name">
+          <span class="form-error" id="nameError"></span>
+        </div>
+        <div class="form-field">
+          <label for="email" data-i18n="form.email">Correo</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" autocomplete="email">
+          <span class="form-error" id="emailError"></span>
+        </div>
+        <div class="form-field">
+          <label for="company"><span data-i18n="form.company">Empresa</span> <span class="optional" data-i18n="form.optional">(opcional)</span></label>
+          <input type="text" id="company" name="company" data-i18n-placeholder="form.companyPh" placeholder="Nombre de empresa (opcional)" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="type" data-i18n="form.type">Tipo de solución</label>
+          <select id="type" name="type">
+            <option value="vivienda" data-i18n="form.opt1">Vivienda</option>
+            <option value="complejo" data-i18n="form.opt2">Complejo residencial</option>
+            <option value="edificio" data-i18n="form.opt3">Edificio comercial</option>
+            <option value="empresa" data-i18n="form.opt4">Empresa inmobiliaria</option>
+            <option value="otro" data-i18n="form.opt5">Otro</option>
+          </select>
+        </div>
+        <div class="form-field form-field--full">
+          <label for="message" data-i18n="form.message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" data-i18n-placeholder="form.messagePh" placeholder="Cuéntanos sobre tu proyecto"></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg form-submit" data-i18n="form.submit">Solicita una demo gratuita</button>
+        <p class="form-note" data-i18n="form.note">Este formulario es una demostración frontend. Para producción, debe conectarse a un servicio o backend real.</p>
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite" data-i18n="form.success">¡Solicitud enviada correctamente!</div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <img src="assets/images/logo-safecore-mark.png" alt="" width="30" height="30">
+        <span>SafeCore</span>
+      </div>
+      <p data-i18n="footer.tagline">Tecnología que protege.</p>
+      <p class="footer__company">PrimeCore Group</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Enlaces del sitio">
+      <h4 data-i18n="footer.nav">Navegación</h4>
+      <ul>
+        <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="#que-es" data-i18n="nav.whatis">¿Qué es?</a></li>
+        <li><a href="#solucion" data-i18n="nav.solution">Solución</a></li>
+        <li><a href="#como-funciona" data-i18n="nav.tech">Tecnología</a></li>
+        <li><a href="#beneficios" data-i18n="nav.benefits">Beneficios</a></li>
+        <li><a href="#clientes" data-i18n="nav.clients">Clientes</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h4 data-i18n="footer.social">Redes</h4>
+      <ul class="footer__social">
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="#" aria-label="X / Twitter">X / Twitter</a></li>
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="YouTube">YouTube</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 data-i18n="footer.legal">Legal</h4>
+      <ul>
+        <li><a href="#" data-i18n="footer.terms">Términos y condiciones</a></li>
+        <li><a href="#" data-i18n="footer.privacy">Política de privacidad</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom container">
+    <p>&copy; <span id="year">2026</span> PrimeCore Group. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
