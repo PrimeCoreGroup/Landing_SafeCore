@@ -326,9 +326,14 @@ p { color: var(--text-secondary); }
   padding: 24px;
   max-height: 0;
   overflow: hidden;
+<<<<<<< HEAD
   transition: max-height 0.35s ease, padding 0.35s ease;
 }
 .mobile-menu:not(.is-open) { padding-top: 0; padding-bottom: 0; border-top-width: 0; }
+=======
+  transition: max-height 0.35s ease;
+}
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
 .mobile-menu.is-open { max-height: 500px; }
 .mobile-menu__links { display: flex; flex-direction: column; gap: 16px; }
 .mobile-menu__links a { font-size: 1.05rem; font-weight: 500; }
@@ -1292,12 +1297,20 @@ p { color: var(--text-secondary); }
 
 .client-card {
   flex: 0 0 auto;
+<<<<<<< HEAD
   width: 320px;
   min-height: 340px;
   background: var(--background);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
+=======
+  width: 270px;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 34px 24px;
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1307,6 +1320,7 @@ p { color: var(--text-secondary); }
 }
 .client-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .client-card__photo {
+<<<<<<< HEAD
   width: 84px;
   height: 84px;
   border-radius: 50%;
@@ -1328,6 +1342,18 @@ p { color: var(--text-secondary); }
 .client-card__name { font-size: 1.1rem; margin-top: auto; margin-bottom: 2px; }
 .client-card__role { font-size: 0.86rem; color: var(--text-muted); }
 .client-card__company { font-size: 0.84rem; font-weight: 700; color: var(--primary); margin-top: 6px; }
+=======
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 4px solid var(--background-blue);
+}
+.client-card__name { font-size: 1.15rem; margin-bottom: 4px; }
+.client-card__role { font-size: 0.9rem; color: var(--text-muted); }
+.client-card__company { font-size: 0.88rem; font-weight: 700; color: var(--primary); margin-top: 8px; }
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
 
 .clients-carousel__arrow {
   flex-shrink: 0;
@@ -1361,7 +1387,11 @@ p { color: var(--text-secondary); }
 
 @media (max-width: 640px) {
   .clients-carousel__arrow { display: none; }
+<<<<<<< HEAD
   .client-card { width: 260px; min-height: 320px; }
+=======
+  .client-card { width: 160px; }
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
 }
 
 /* =========================================================
@@ -1474,6 +1504,7 @@ p { color: var(--text-secondary); }
 ========================================================= */
 a, button, input, select, textarea { outline-offset: 2px; }
 ::selection { background: var(--primary); color: #fff; }
+<<<<<<< HEAD
 
 /* =========================================================
    PLANES (por segmento)
@@ -1709,3 +1740,5 @@ a, button, input, select, textarea { outline-offset: 2px; }
   .plans__tab { padding: 11px 16px; font-size: 0.85rem; }
   .plan-card { padding: 30px 22px 24px; }
 }
+=======
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055

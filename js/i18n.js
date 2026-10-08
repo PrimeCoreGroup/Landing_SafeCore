@@ -255,6 +255,7 @@ const SAFECORE_TRANSLATIONS = {
 
     "clients.title": "Cartera de clientes",
     "clients.subtitle": "Empresas y hogares que confiarían en SafeCore para proteger sus espacios.",
+<<<<<<< HEAD
     "clients.note": "Sección de demostración: nombres, empresas, cargos y comentarios son ficticios, y las personas fotografiadas no son clientes reales de SafeCore. Deben reemplazarse por clientes y testimonios reales antes de producción.",
     "clients.c1.role": "Gerente de Operaciones",
     "clients.c1.quote": "\"Desde que integramos SafeCore, dejamos de enterarnos de las emergencias por terceros: el sistema ya actuó antes de que nos llamen.\"",
@@ -286,6 +287,17 @@ const SAFECORE_TRANSLATIONS = {
     "clients.c14.quote": "\"Con cientos de estudiantes en el campus, contar con una evacuación guiada automáticamente es un cambio enorme.\"",
     "clients.c15.role": "Propietaria de vivienda",
     "clients.c15.quote": "\"Lo que más me gusta es que las alertas son claras: sé qué pasó y qué hizo el sistema.\"",
+=======
+    "clients.note": "Sección de demostración: nombres, empresas y fotografías son ficticios, generados únicamente para presentar el funcionamiento del proyecto.",
+    "clients.c1.role": "Gerente de Operaciones",
+    "clients.c2.role": "Administradora de Propiedad",
+    "clients.c3.role": "Director de Seguridad",
+    "clients.c4.role": "Propietaria de vivienda",
+    "clients.c5.role": "Jefe de Mantenimiento",
+    "clients.c6.role": "Gerente Comercial",
+    "clients.c7.role": "Administrador de Edificio",
+    "clients.c8.role": "Directora de Proyectos",
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
 
     "cta.title": "¿Listo para proteger tu edificio o tu hogar?",
     "cta.subtitle": "Descubre cómo SafeCore puede transformar tu infraestructura en un espacio más seguro, inteligente y resiliente.",
@@ -312,6 +324,7 @@ const SAFECORE_TRANSLATIONS = {
     "form.errorEmailInvalid": "Ingresa un correo electrónico válido.",
     "form.errorMessage": "Cuéntanos brevemente tu proyecto.",
 
+<<<<<<< HEAD
     "nav.plans": "Planes",
     "plans.title": "Planes para cada segmento",
     "plans.subtitle": "Todos parten del mismo núcleo —sismo + evacuación automática— y se amplían con agregados según tu necesidad y presupuesto.",
@@ -413,6 +426,8 @@ const SAFECORE_TRANSLATIONS = {
     "plans.p6.a1": "Personalización total",
     "plans.p6.a2": "Integración con sistemas externos",
     "plans.p6.a3": "Reportes ejecutivos",
+=======
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
     "footer.tagline": "Tecnología que protege.",
     "footer.nav": "Navegación",
     "footer.social": "Redes",
@@ -672,6 +687,7 @@ const SAFECORE_TRANSLATIONS = {
 
     "clients.title": "Client portfolio",
     "clients.subtitle": "Businesses and homes that would trust SafeCore to protect their spaces.",
+<<<<<<< HEAD
     "clients.note": "Demo section: names, companies, roles and quotes are fictitious, and the people pictured are not real SafeCore clients. Replace with real clients and testimonials before production.",
     "clients.c1.role": "Operations Manager",
     "clients.c1.quote": "\"Since we integrated SafeCore, we stopped hearing about emergencies from third parties: the system already acted before anyone called us.\"",
@@ -703,6 +719,17 @@ const SAFECORE_TRANSLATIONS = {
     "clients.c14.quote": "\"With hundreds of students on campus, relying on an automatically guided evacuation is a huge change.\"",
     "clients.c15.role": "Homeowner",
     "clients.c15.quote": "\"What I like most is that the alerts are clear: I know what happened and what the system did.\"",
+=======
+    "clients.note": "Demo section: names, companies and photos are fictitious, generated solely to present how the project works.",
+    "clients.c1.role": "Operations Manager",
+    "clients.c2.role": "Property Manager",
+    "clients.c3.role": "Security Director",
+    "clients.c4.role": "Homeowner",
+    "clients.c5.role": "Maintenance Lead",
+    "clients.c6.role": "Commercial Manager",
+    "clients.c7.role": "Building Administrator",
+    "clients.c8.role": "Projects Director",
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
 
     "cta.title": "Ready to protect your building or your home?",
     "cta.subtitle": "Discover how SafeCore can transform your infrastructure into a safer, smarter and more resilient space.",
@@ -729,6 +756,7 @@ const SAFECORE_TRANSLATIONS = {
     "form.errorEmailInvalid": "Enter a valid email address.",
     "form.errorMessage": "Tell us briefly about your project.",
 
+<<<<<<< HEAD
     "nav.plans": "Plans",
     "plans.title": "Plans for every segment",
     "plans.subtitle": "All plans start from the same core —earthquake + automatic evacuation— and grow with add-ons based on your needs and budget.",
@@ -830,6 +858,8 @@ const SAFECORE_TRANSLATIONS = {
     "plans.p6.a1": "Full customization",
     "plans.p6.a2": "Integration with external systems",
     "plans.p6.a3": "Executive reports",
+=======
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
     "footer.tagline": "Technology that protects.",
     "footer.nav": "Navigation",
     "footer.social": "Social",

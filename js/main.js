@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initDynamicYear();
   initThemeToggle();
   initClientsCarousel();
+<<<<<<< HEAD
   initPlansTabs();
+=======
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
 });
 
 /* ---------------------------------------------------------
@@ -280,6 +283,7 @@ function initDynamicYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 }
+<<<<<<< HEAD
 
 /* ---------------------------------------------------------
    Planes: selector Hogares (B2C) / Empresas (B2B)
@@ -313,3 +317,5 @@ function initPlansTabs() {
     link.addEventListener('click', () => activate(link.getAttribute('data-plan-tab')));
   });
 }
+=======
+>>>>>>> 68789dbbfc955e861262898e8c41b0641b850055
