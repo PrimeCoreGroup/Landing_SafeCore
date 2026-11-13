@@ -18,6 +18,7 @@ const SAFECORE_TRANSLATIONS = {
     "nav.contact": "Contacto",
     "nav.clients": "Clientes",
     "nav.cta": "Solicita una demo",
+    "nav.platform": "Acceder a la plataforma",
 
     "hero.eyebrow": "Tecnología para una infraestructura más segura",
     "hero.title": "Protege lo que más importa con <span class=\"text-gradient\">SafeCore</span>",
@@ -426,6 +427,7 @@ const SAFECORE_TRANSLATIONS = {
     "nav.contact": "Contact",
     "nav.clients": "Clients",
     "nav.cta": "Request a demo",
+    "nav.platform": "Access the platform",
 
     "hero.eyebrow": "Technology for safer infrastructure",
     "hero.title": "Protect what matters most with <span class=\"text-gradient\">SafeCore</span>",
